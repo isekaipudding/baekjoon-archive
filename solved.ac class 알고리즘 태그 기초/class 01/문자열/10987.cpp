@@ -1,4 +1,4 @@
-// 10987(평균은 넘겠지) 문제 : https://www.acmicpc.net/problem/10987
+// 10987(모음의 개수) 문제 : https://www.acmicpc.net/problem/10987
 // 알고리즘 태그 목록
 /*
 구현
