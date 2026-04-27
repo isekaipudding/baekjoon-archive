@@ -11,12 +11,14 @@ using namespace std;
 
 // 소수 판정 함수
 bool is_prime(int n) {
-    if(n <= 1) return false; // 1은 소수가 아님
-    for(int i = 2; i < n; i++) {
-        // 2부터 n-1까지 나누어 떨어지는 수가 있다면 소수가 아님
-        if(n % i == 0) return false;
+    if (n <= 1) return false;
+    if (n == 2) return true; // 2는 유일한 짝수 소수
+    if (n % 2 == 0) return false; // 2를 제외한 짝수 미리 거르기
+
+    // i < n 대신 i * i <= n (즉, 루트 n) 까지만 확인
+    for (int i = 3; i * i <= n; i += 2) {
+        if (n % i == 0) return false;
     }
-    // 다 통과하면 소수임
     return true;
 }
 
